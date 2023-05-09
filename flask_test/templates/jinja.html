@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello {{name}}</h1>
+
+    <!-- 반복문 -->
+    <!-- loop.index: 1부터 시작 -->
+    <ul>
+        {% for index in range(values | length) %}
+        <li>{{ loop.index }}. {{ values[index] }}</li> 
+        {% endfor %}
+    </ul>
+
+    <!-- 조건문 -->
+    
+    {% if data >= 30 %}
+    <h3>30이상</h3>
+    {% elif data >= 20 %}
+    <h3>20이상</h3>
+    {% else %}
+    <h3>20미만</h3>
+    {% endif %}
+</body>
+</html>
